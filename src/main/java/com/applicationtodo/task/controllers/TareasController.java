@@ -28,7 +28,7 @@ public class TareasController {
         Optional<Tareas> wasFound = tareaService.findById(id);
 
         return wasFound.map((task) -> new ResponseEntity<>(task, HttpStatus.OK))
-                .orElseGet(() -> new ResponseEntity<>(HttpStatus.BAD_REQUEST));
+                .orElseGet(() -> null);
     }
 
     @GetMapping(value = "/found-task-name/{name}")
@@ -36,7 +36,7 @@ public class TareasController {
         Optional<Tareas> wasFound = tareaService.findByName(nombre);
 
         return wasFound.map((task) -> new ResponseEntity<>(task, HttpStatus.OK))
-                .orElseGet(() -> new ResponseEntity<>(HttpStatus.BAD_REQUEST));
+                .orElseGet(() -> null);
     }
 
     @PostMapping(value = "/save-task")
@@ -55,6 +55,7 @@ public class TareasController {
                 .orElseGet(() -> new ResponseEntity<>(HttpStatus.BAD_REQUEST));
     }
 
+    // Eliminar tarea dependiendo el parametro, cumplir con todas las especificaciones correspondientes.
     @DeleteMapping(value = "/delete-task-id/{id}")
     public ResponseEntity<?> eliminarTaskPorId(@PathVariable(value = "id") Integer id){
         tareaService.deleteById(id);
