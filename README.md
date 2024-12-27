@@ -40,6 +40,7 @@ los pasos para ejecutar localmente el backend de spring boot con java:
   1.- Installar el IDE intellij idea se puede hacer desde la pagina oficial
   
   2.- Una vez instalado se necesita clonar el proyecto de la siguiente manera:
+  
       * git clone https://github.com/HumbertoArellanoYham/Prueba-Tecnica-To-Do-Back-end
 
   3.- Descomprimir la carpeta clonada y abrir el proyecto en intellij idea
@@ -49,8 +50,10 @@ los pasos para ejecutar localmente el backend de spring boot con java:
       nesesitamos es crear la base de datos nadamas.
 
   5.- Para mapear a la base de datos abrimos el archivo application.properties y descomentamos la linea siguiente:
+  
           * spring.jpa.hibernate.ddl-auto=create
-      y comentamos la siguiente:
+  
+      comentamos la siguiente:
           * spring.jpa.hibernate.ddl-auto=update
       esto solo cuando ejecutamos el backend por primera vez para comunicar la base de datos con la entidad establecida y crear las 
       columnas asociadas.
