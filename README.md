@@ -43,9 +43,9 @@ los pasos para ejecutar localmente el backend de spring boot con java:
   
       * git clone https://github.com/HumbertoArellanoYham/Prueba-Tecnica-To-Do-Back-end
 
-  3.- Descomprimir la carpeta clonada y abrir el proyecto en intellij idea
+  3.- Abrir el proyecto en intellij idea
 
-  4.- Descargar pgadmin4 desde la pagina oficial y aqui no se nesesita hacer mucho ya que en las entidades
+  4.- Descargar pgadmin4 desde la pagina oficial y aqui no se nesesita hacer mucho ya que en las entidades de
       spring estan mapeadas a la tabla(se puede visualizar en el archivo application.properties) lo que si 
       nesesitamos es crear la base de datos nadamas.
 
