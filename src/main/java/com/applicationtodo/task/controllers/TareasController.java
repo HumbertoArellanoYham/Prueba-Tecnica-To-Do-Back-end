@@ -2,12 +2,12 @@ package com.applicationtodo.task.controllers;
 
 import com.applicationtodo.task.entities.Tareas;
 import com.applicationtodo.task.services.TareaService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 
@@ -40,7 +40,7 @@ public class TareasController {
     }
 
     @PostMapping(value = "/save-task")
-    public ResponseEntity<Tareas> guardarTarea(@RequestBody Tareas tarea){
+    public ResponseEntity<Tareas> guardarTarea(@Valid @RequestBody Tareas tarea){
         Optional<Tareas> saveTask = tareaService.save(tarea);
 
         return saveTask.map((taskSaveInDB) -> new ResponseEntity<>(taskSaveInDB, HttpStatus.OK))
@@ -48,7 +48,7 @@ public class TareasController {
     }
 
     @PatchMapping(value = "/patch-task")
-    public ResponseEntity<Tareas> actualizarTarea(@RequestBody Tareas tarea){
+    public ResponseEntity<Tareas> actualizarTarea(@Valid @RequestBody Tareas tarea){
         Optional<Tareas> updateTask = tareaService.update(tarea);
 
         return updateTask.map((taskSaveInDB) -> new ResponseEntity<>(taskSaveInDB, HttpStatus.OK))

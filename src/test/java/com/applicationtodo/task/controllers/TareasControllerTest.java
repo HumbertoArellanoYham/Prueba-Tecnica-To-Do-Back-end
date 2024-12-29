@@ -48,7 +48,7 @@ class TareasControllerTest {
                 .andExpect(content().string(containsString(expectedResponse)));
     }
 
-    // Error en el test el nombre no coincide con el de la base de datos
+    // A proposito: Error en el test el nombre no coincide con el de la base de datos
     @Test
     void encontrarTareaPorNombreTest() throws Exception {
         String expectedResponse = "{\"id_tarea\":4,\"nombre\":\"api documentation\",\"description\":\"Agregar la documentacion correspondiente al proyecto desde los inicios, sus tecnologias y todo lo relacionado con ejecutarlo en de manera local\",\"tareaCompletada\":true,\"fechaInicio\":\"2024-12-27\",\"fechaFin\":\"2024-12-31\"}]";
