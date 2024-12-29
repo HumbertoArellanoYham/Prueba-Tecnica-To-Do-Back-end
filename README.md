@@ -20,6 +20,16 @@ se debe optar por re-estructurar el proyecto basado en funcionalidad como lo mue
 
 <img width="434" alt="Screen Shot 2024-12-27 at 3 19 00" src="https://github.com/user-attachments/assets/dab83fe3-3e42-4071-a49d-d82ecbb3ec11" />
 
+## Testing 
+Las pruebas unitarias estan para probar solo la capa inferior, donde Spring maneja la solicitud HTTP entrante y la entrega a su controlador. De esa manera, se utiliza casi toda la pila completa y el código se llamará exactamente de la misma manera que si estuviera procesando una solicitud HTTP real, pero sin el costo de iniciar el servidor.
+
+   *  Utilizamos Spring MockMvc para simular datos
+   *  Se injecta @AutoConfigureMockMvc en la clase del test
+
+Otro punto a tomar en cuenta es ejecutar los test en otro puerto, asi logramos que no interfiera con la ejecucion de la aplicacion principal:
+   *  @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
+
+
 ## Base de datos diagrama
 ![Screen Shot 2024-12-27 at 3 24 18](https://github.com/user-attachments/assets/2099af70-dabb-493b-9c19-f963f37d34b3)
 
