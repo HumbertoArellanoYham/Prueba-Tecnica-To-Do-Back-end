@@ -1,6 +1,8 @@
 package com.applicationtodo.task.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
+
 import java.time.LocalDate;
 
 @Entity
@@ -14,6 +16,7 @@ public class Tareas {
     @Column(name = "nombre", nullable = false)
     private String nombre;
 
+    @Size(min = 5, max = 3000)
     @Column(name = "description", nullable = false)
     private String description;
 
