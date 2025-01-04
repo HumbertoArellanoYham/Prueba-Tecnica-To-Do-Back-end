@@ -6,7 +6,8 @@
   * Intellij Idea community
   * Postman
   * PGAdmin base de datos
-  * PostGresSQL 
+  * PostGresSQL
+  * Redis Cache
 
 ## Operaciones:
   * Crear
