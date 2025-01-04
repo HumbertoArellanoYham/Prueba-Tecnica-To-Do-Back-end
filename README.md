@@ -34,6 +34,11 @@ Otro punto a tomar en cuenta es ejecutar los test en otro puerto, asi logramos q
      
 ![Screen Shot 2024-12-29 at 17 23 22](https://github.com/user-attachments/assets/b6ca14dd-03d8-4416-8748-ef2cc2e4e292)
 
+## Redis Cache
+Implemente Redis Cache para almacenar y recuperar datos rápidamente, especialmente al consultar datos y no hacer tantas peticiones al servidor. Debido a su velocidad, Redis es la opción ideal para almacenar en caché llamadas de API y consultas de bases de datos.
+
+ * En el proyecto se puede vizualizar mejor, es sumamente rapido ya que redis su estructura interna es una tabla hash (clave - valor) lo que nos permite
+   hacer consultas en una complejidad temporal de O(1) que seria la mas eficiente si se usa correctamente.
 
 ## Base de datos diagrama
 ![Screen Shot 2024-12-27 at 3 24 18](https://github.com/user-attachments/assets/2099af70-dabb-493b-9c19-f963f37d34b3)
