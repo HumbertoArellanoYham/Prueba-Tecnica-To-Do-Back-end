@@ -29,6 +29,11 @@ Las pruebas unitarias estan para probar solo la capa inferior, donde Spring mane
 Otro punto a tomar en cuenta es ejecutar los test en otro puerto, asi logramos que no interfiera con la ejecucion de la aplicacion principal:
    *  @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
 
+## Encriptación de contraseñas
+   * Se utilizo la herramienta que nos proporciona spring security BCryptPasswordEncoder, utilize PasswordEncoder en mi UserService para codificar la contraseña durante el proceso de registro del usuario.
+     
+![Screen Shot 2024-12-29 at 17 23 22](https://github.com/user-attachments/assets/b6ca14dd-03d8-4416-8748-ef2cc2e4e292)
+
 
 ## Base de datos diagrama
 ![Screen Shot 2024-12-27 at 3 24 18](https://github.com/user-attachments/assets/2099af70-dabb-493b-9c19-f963f37d34b3)
