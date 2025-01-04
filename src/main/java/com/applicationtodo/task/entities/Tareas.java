@@ -3,11 +3,12 @@ package com.applicationtodo.task.entities;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "tareas", schema = "public")
-public class Tareas {
+public class Tareas implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_tarea")
