@@ -1,4 +1,4 @@
-# API REST para gestionar las tareas
+# API REST para gestionar las tareas pendientes de la aplicación ToDo
 
 ## Tecnologías utilizadas y herramientas
   * Java 17
@@ -40,6 +40,14 @@ Implemente Redis Cache para almacenar y recuperar datos rápidamente, especialme
 
  * En el proyecto se puede vizualizar mejor, es sumamente rapido ya que redis su estructura interna es una tabla hash (clave - valor) lo que nos permite
    hacer consultas en una complejidad temporal de O(1) que seria la mas eficiente si se usa correctamente.
+
+ Multiples peticiones en el frontend para el consumo de las listas pendientes:
+ ![Screen Shot 2025-01-04 at 16 47 51](https://github.com/user-attachments/assets/760c5860-8b63-4f30-870c-9a27b771dc2c)
+
+ Solo una respuesta de la base de datos:
+
+ <img width="1270" alt="Screen Shot 2025-01-04 at 16 46 47" src="https://github.com/user-attachments/assets/2d6815f8-6ac4-4234-b792-79bc36c7f698" />
+
 
 ## Base de datos diagrama
 ![Screen Shot 2024-12-27 at 3 24 18](https://github.com/user-attachments/assets/2099af70-dabb-493b-9c19-f963f37d34b3)
